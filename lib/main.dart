@@ -6,9 +6,16 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.amber,
         appBar: AppBar(
-          title: const Text('My Dice'),
+          title: const Text(
+              'Foot Dice',
+              style: TextStyle(
+                fontSize: 25.0,
+                fontWeight: FontWeight.normal,
+                fontFamily: 'FuzzyBubbles',
+              )
+            ),
           backgroundColor: Colors.teal,
         ),
         body: const DicePage(),
@@ -43,7 +50,7 @@ class _DicePageState extends State<DicePage> {
           Expanded(
             child: TextButton(
               child: Image.asset(
-                'images/dice$leftDiceNumber.png',
+                'images/$leftDiceNumber.png',
               ),
               onPressed: () {
                 changeDiceFace();
@@ -53,7 +60,7 @@ class _DicePageState extends State<DicePage> {
           Expanded(
             child: TextButton(
               child: Image.asset(
-                'images/dice$rightDiceNumber.png',
+                'images/$rightDiceNumber.png',
               ),
               onPressed: () {
                 changeDiceFace();
